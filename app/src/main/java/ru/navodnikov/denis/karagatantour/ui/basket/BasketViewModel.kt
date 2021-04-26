@@ -10,11 +10,8 @@ class BasketViewModel(
     private val getListOfOrdersUseCase: GetListOfOrdersUseCase,
     private val deleteOrderUseCase: DeleteOrderUseCase
 ) : ViewModel(), BasketContract.ViewModel {
-
     private val ordersLiveData: LiveData<List<Order>> = getListOfOrdersUseCase.execute().asLiveData()
-
-    private val massageMutableLiveData = MutableLiveData<Int>()
-    private val massageLiveData: LiveData<Int> = massageMutableLiveData
+    private val massageLiveData = MutableLiveData<Int>()
 
     override fun getOrdersLiveData(): LiveData<List<Order>> = ordersLiveData
     override fun getMassageLiveData() = massageLiveData
@@ -23,8 +20,4 @@ class BasketViewModel(
             deleteOrderUseCase.execute(order)
         }
     }
-
-
-
-
 }

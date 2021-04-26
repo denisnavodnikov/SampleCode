@@ -4,6 +4,5 @@ import androidx.lifecycle.LifecycleObserver
 
 class FragmentContract {
     interface ViewModel : LifecycleObserver
-
     interface View
 }

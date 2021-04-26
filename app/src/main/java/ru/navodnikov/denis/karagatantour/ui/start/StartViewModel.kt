@@ -9,23 +9,19 @@ import ru.navodnikov.denis.domain.usecases.GetListOfIslandsUseCase
 
 class StartViewModel(private val getListOfIslandsUseCase: GetListOfIslandsUseCase) : ViewModel(), StartContract.ViewModel {
 
-    private val islandsMutableLiveData = MutableLiveData(getListOfIslandsUseCase.execute())
-    private val islandsLiveData: LiveData<List<Island>> = islandsMutableLiveData
-
-    private val changeIslandMutableLiveData = MutableLiveData<StartViewModelState>()
-    private val changeIslandLiveData: LiveData<StartViewModelState> = changeIslandMutableLiveData
+    private val islandsLiveData = MutableLiveData(getListOfIslandsUseCase.execute())
+    private val changeIslandLiveData = MutableLiveData<StartViewModelState>()
 
     override fun getIslandsLiveData() = islandsLiveData
     override fun getChangeIslandLiveData() = changeIslandLiveData
 
     override fun selectIsland(island: IslandEnum) {
-        changeIslandMutableLiveData.value = StartViewModelState.NavigateTo(island)
+        changeIslandLiveData.value = StartViewModelState.NavigateTo(island)
     }
 
     override fun clearNavigation(){
-        changeIslandMutableLiveData.value = StartViewModelState.None
+        changeIslandLiveData.value = StartViewModelState.None
     }
-
 }
 
 sealed class StartViewModelState {

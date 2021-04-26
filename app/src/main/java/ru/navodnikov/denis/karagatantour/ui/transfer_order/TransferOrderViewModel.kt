@@ -19,20 +19,11 @@ class TransferOrderViewModel(
     private val getListOfCitesUseCase: GetListOfCitesUseCase
 ) : ViewModel(), TransferOrderContract.ViewModel {
 
-    private val islandsMutableLiveData = MutableLiveData(getArrayOfTitlesIslandsUseCase.execute())
-    private val islandsLiveData: LiveData<Array<String>> = islandsMutableLiveData
-
-    private val messageMutableLiveData = MutableLiveData<Int>()
-    private val messageLiveData: LiveData<Int> = messageMutableLiveData
-
-    private val citesFromMutableLiveData: MutableLiveData<Array<out String>> = MutableLiveData()
-    private val citesFromLiveData: LiveData<Array<out String>> = citesFromMutableLiveData
-
-    private val citesToMutableLiveData: MutableLiveData<Array<out String>> = MutableLiveData()
-    private val citesToLiveData: LiveData<Array<out String>> = citesToMutableLiveData
-
-    private val dateMutableLiveData = MutableLiveData<String>()
-    private val dateLiveData: LiveData<String> = dateMutableLiveData
+    private val islandsLiveData = MutableLiveData(getArrayOfTitlesIslandsUseCase.execute())
+    private val messageLiveData = MutableLiveData<Int>()
+    private val citesFromLiveData: MutableLiveData<Array<out String>> = MutableLiveData()
+    private val citesToLiveData: MutableLiveData<Array<out String>> = MutableLiveData()
+    private val dateLiveData = MutableLiveData<String>()
 
     override fun getIslandsLiveData() = islandsLiveData
     override fun getCitesFromLiveData() = citesFromLiveData
@@ -40,7 +31,7 @@ class TransferOrderViewModel(
     override fun getMassageLiveData() = messageLiveData
 
     override fun setDateSince(date: String) {
-        dateMutableLiveData.value = date
+        dateLiveData.value = date
     }
 
     override fun getDataLiveData() = dateLiveData
@@ -54,34 +45,33 @@ class TransferOrderViewModel(
     ) {
         when {
             cityFrom == EMPTY_TEXT -> {
-                messageMutableLiveData.value = R.string.error_city_from
+                messageLiveData.value = R.string.error_city_from
             }
             cityTo == EMPTY_TEXT -> {
-                messageMutableLiveData.value = R.string.error_city_to
+                messageLiveData.value = R.string.error_city_to
             }
             numberAdults == 0 -> {
-                messageMutableLiveData.value = R.string.error_adults
+                messageLiveData.value = R.string.error_adults
             }
             date == EMPTY_TEXT -> {
-                messageMutableLiveData.value = R.string.error_date
+                messageLiveData.value = R.string.error_date
             }
             else -> {
                 viewModelScope.launch {
                     orderTransferUseCase.execute(cityFrom, cityTo, numberAdults, numberChildren, date, comments)
                     withContext(Dispatchers.Main) {
-                        messageMutableLiveData.value = R.string.transfer_add_to_cart
+                        messageLiveData.value = R.string.transfer_add_to_cart
                     }
                 }
-
             }
         }
     }
 
     override fun getListOfCitesFrom(island: Int) {
-        citesFromMutableLiveData.value = getListOfCitesUseCase.execute(island)
+        citesFromLiveData.value = getListOfCitesUseCase.execute(island)
     }
 
     override fun getListOfCitesTo(island: Int) {
-        citesToMutableLiveData.value = getListOfCitesUseCase.execute(island)
+        citesToLiveData.value = getListOfCitesUseCase.execute(island)
     }
 }

@@ -39,6 +39,4 @@ class MainActivity : AppCompatActivity() {
         }
         snackbar?.show()
     }
-
-
 }

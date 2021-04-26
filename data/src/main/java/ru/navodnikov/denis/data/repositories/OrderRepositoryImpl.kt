@@ -14,7 +14,7 @@ import ru.navodnikov.denis.domain.entity.Order
 import ru.navodnikov.denis.domain.repositories.OrderRepository
 
 class OrderRepositoryImpl(
-    private val toursDao: ToursDAO,
+    private val storageDB: ToursDAO,
     private val context: Context,
     private val storage: Storage,
     private val telegramApiService: TelegramApiService
@@ -26,7 +26,7 @@ class OrderRepositoryImpl(
         date: String,
         price: String
     ) {
-        toursDao.insert(
+        storageDB.insert(
             OrderData(
                 typeOfOrder = context.getText(R.string.excursion).toString(),
                 title = context.resources.getString(excursion.title),
@@ -52,7 +52,7 @@ class OrderRepositoryImpl(
         date: String,
         comments: String
     ) {
-        toursDao.insert(
+        storageDB.insert(
             OrderData(
                 typeOfOrder = context.getText(R.string.transfer).toString(),
                 title = context.resources.getString(R.string.transfer_title_order, cityFrom, cityTo),
@@ -79,7 +79,7 @@ class OrderRepositoryImpl(
         dateBefore: String,
         comments: String
     ) {
-        toursDao.insert(
+        storageDB.insert(
             OrderData(
                 typeOfOrder = context.getText(R.string.hotel_booking).toString(),
                 title = when (rating) {
@@ -103,13 +103,13 @@ class OrderRepositoryImpl(
     }
 
     override fun getOrders(): Flow<List<Order>> {
-        return toursDao.getAllOrders().map { list -> list.map { it.mapToDomain() } }
+        return storageDB.getAllOrders().map { list -> list.map { it.mapToDomain() } }
 
 
     }
 
     override suspend fun deleteOrder(order: Order) {
-        toursDao.clearOrders(
+        storageDB.clearOrders(
             OrderData(
                 id = order.id,
                 typeOfOrder = order.typeOfOrder,
@@ -139,7 +139,7 @@ class OrderRepositoryImpl(
                 typeOfContact
             )
         )
-        val orders = toursDao.getAllOrders().first()
+        val orders = storageDB.getAllOrders().first()
         for (order in orders) {
             message.append(order.typeOfOrder, BREAK_LINE)
             message.append(order.title, BREAK_LINE)
@@ -158,8 +158,13 @@ class OrderRepositoryImpl(
             }
             message.append(BREAK_LINE)
         }
-//        val encodedMsg = message.toString().replace(" ", "+")
-//        val encodedMsg = URLEncoder.encode(message.toString(), "UTF-8")
-        return telegramApiService.sendMassage(message.toString()).ok
+
+        val resultIsOk = telegramApiService.sendMassage(message.toString()).ok
+        if(resultIsOk){
+            for(order in getOrders().first()){
+                deleteOrder(order)
+            }
+        }
+        return resultIsOk
     }
 }

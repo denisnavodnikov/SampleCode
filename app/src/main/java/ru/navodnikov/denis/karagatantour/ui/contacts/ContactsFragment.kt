@@ -17,6 +17,7 @@ import ru.navodnikov.denis.karagatantour.ui.utils.Intents.*
 
 class ContactsFragment : BaseFragment<FragmentContactsBinding>(),
     ContactsContract.View, View.OnClickListener {
+
     private val contactsViewModel: ContactsViewModel by viewModel()
 
     override fun onCreateView(
@@ -73,6 +74,7 @@ class ContactsFragment : BaseFragment<FragmentContactsBinding>(),
         if (activity?.let { intent.resolveActivity(it.packageManager) } != null) {
             startActivity(intent)
         }
+
 
     }
 

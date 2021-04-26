@@ -19,16 +19,9 @@ class HotelOrderViewModel(
     private val island: IslandEnum
 ) :
     ViewModel(), HotelOrderContract.ViewModel {
-
-    private val citesMutableLiveData = MutableLiveData(getListOfCitesUseCase.execute(island.ordinal))
-    private val citesLiveData: LiveData<Array<out String>> = citesMutableLiveData
-
-    private val messageMutableLiveData = MutableLiveData<Int>()
-    private val messageLiveData: LiveData<Int> = messageMutableLiveData
-
-    private val dateSinceMutableLiveData = MutableLiveData<String>()
-    private val dateSinceLiveData: LiveData<String> = dateSinceMutableLiveData
-
+    private val citesLiveData = MutableLiveData(getListOfCitesUseCase.execute(island.ordinal))
+    private val messageLiveData = MutableLiveData<Int>()
+    private val dateSinceLiveData = MutableLiveData<String>()
     private val dateBeforeMutableLiveData = MutableLiveData<String>()
     private val dateBeforeLiveData: LiveData<String> = dateBeforeMutableLiveData
 
@@ -38,7 +31,7 @@ class HotelOrderViewModel(
     override fun getMassageLiveData() = messageLiveData
 
     override fun setDateSince(date: String) {
-        dateSinceMutableLiveData.value = date
+        dateSinceLiveData.value = date
     }
 
     override fun setDateBefore(date: String) {
@@ -56,19 +49,19 @@ class HotelOrderViewModel(
     ) {
         when {
             city.isEmpty() -> {
-                messageMutableLiveData.value = R.string.error_city_hotel
+                messageLiveData.value = R.string.error_city_hotel
             }
             rating == ZERO -> {
-                messageMutableLiveData.value = R.string.error_rating
+                messageLiveData.value = R.string.error_rating
             }
             numberAdults == ZERO -> {
-                messageMutableLiveData.value = R.string.error_adults
+                messageLiveData.value = R.string.error_adults
             }
             dateSince.isEmpty() -> {
-                messageMutableLiveData.value = R.string.error_date_since
+                messageLiveData.value = R.string.error_date_since
             }
             dateBefore.isEmpty() -> {
-                messageMutableLiveData.value = R.string.error_date_before
+                messageLiveData.value = R.string.error_date_before
             }
             else -> {
                 viewModelScope.launch {
@@ -82,10 +75,9 @@ class HotelOrderViewModel(
                         comments = comments
                     )
                     withContext(Dispatchers.Main) {
-                        messageMutableLiveData.value = R.string.hotel_add_to_cart
+                        messageLiveData.value = R.string.hotel_add_to_cart
                     }
                 }
-
             }
         }
     }

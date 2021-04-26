@@ -22,9 +22,7 @@ val appModule = module {
     viewModel {
         OrderViewModel(
             getTypesOfContacts = get(),
-            sendOrdersUseCase = get(),
-            deleteOrderUseCase = get(),
-            getListOfOrdersUseCase = get()
+            sendOrdersUseCase = get()
         )
     }
     viewModel { BasketViewModel(getListOfOrdersUseCase = get(), deleteOrderUseCase = get()) }

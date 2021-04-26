@@ -61,7 +61,7 @@ val dataModule = module {
     single<CitesRepository> { CitesRepositoryImpl(storage = get(), context = androidApplication()) }
     single<OrderRepository> {
         OrderRepositoryImpl(
-            toursDao = get(),
+            storageDB =  get(),
             context = androidApplication(),
             storage = get(),
             telegramApiService = get()

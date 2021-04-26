@@ -81,5 +81,4 @@ class BasketFragment : BaseFragment<FragmentBasketBinding>(),
             showMessage(it)
         })
     }
-
 }
