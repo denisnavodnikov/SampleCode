@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.contacts.ContactsFragment">
+
+    <ImageView
+        android:id="@+id/logo_contacts_image_view"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/primary_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/logo_big_size" />
+
+    <TextView
+        android:id="@+id/contacts_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/contacts_text"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_contacts_image_view" />
+
+    <ImageView
+        android:id="@+id/location_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_location_icon"
+        app:layout_constraintBottom_toTopOf="@+id/address_text"
+        app:layout_constraintEnd_toStartOf="@+id/mail_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contacts_text_view" />
+
+    <TextView
+        android:id="@+id/address_text"
+        android:text="@string/address"
+        app:layout_constraintBottom_toTopOf="@+id/whatsapp_icon"
+        app:layout_constraintEnd_toEndOf="@+id/location_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/location_icon"
+        app:layout_constraintTop_toBottomOf="@+id/location_icon"
+        style="@style/ContactsText" />
+
+    <ImageView
+        android:id="@+id/mail_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_email_icon"
+        app:layout_constraintBottom_toTopOf="@+id/mail_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/location_icon"
+        app:layout_constraintTop_toBottomOf="@+id/contacts_text_view" />
+
+    <TextView
+        android:id="@+id/mail_text"
+        android:text="@string/mail_text"
+        style="@style/ContactsText"
+        app:layout_constraintBottom_toTopOf="@+id/telegram_icon"
+        app:layout_constraintEnd_toEndOf="@+id/mail_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/mail_icon"
+        app:layout_constraintTop_toBottomOf="@+id/mail_icon" />
+
+    <ImageView
+        android:id="@+id/whatsapp_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_whatsapp_icon"
+        app:layout_constraintBottom_toTopOf="@+id/whatsapp_text"
+        app:layout_constraintEnd_toStartOf="@+id/telegram_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_text" />
+
+    <ImageView
+        android:id="@+id/telegram_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_telegram_icon"
+        app:layout_constraintBottom_toTopOf="@+id/telegram_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/whatsapp_icon"
+        app:layout_constraintTop_toBottomOf="@+id/mail_text" />
+
+    <TextView
+        android:id="@+id/whatsapp_text"
+        style="@style/ContactsText"
+        android:text="@string/whatsapp"
+        app:layout_constraintBottom_toTopOf="@+id/instagram_icon"
+        app:layout_constraintEnd_toEndOf="@+id/whatsapp_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/whatsapp_icon"
+        app:layout_constraintTop_toBottomOf="@+id/whatsapp_icon" />
+
+    <TextView
+        android:id="@+id/telegram_text"
+        style="@style/ContactsText"
+        android:text="@string/telegram"
+        app:layout_constraintBottom_toTopOf="@+id/facebook_icon"
+        app:layout_constraintEnd_toEndOf="@+id/telegram_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/telegram_icon"
+        app:layout_constraintTop_toBottomOf="@+id/telegram_icon" />
+
+    <ImageView
+        android:id="@+id/facebook_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_facebook_icon"
+        app:layout_constraintBottom_toTopOf="@+id/facebook_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/instagram_icon"
+        app:layout_constraintTop_toBottomOf="@+id/telegram_text" />
+
+    <ImageView
+        android:id="@+id/instagram_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_instagram_icon"
+        app:layout_constraintBottom_toTopOf="@+id/instagram_text"
+        app:layout_constraintEnd_toStartOf="@+id/facebook_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whatsapp_text" />
+
+    <TextView
+        android:id="@+id/instagram_text"
+        style="@style/ContactsText"
+        android:text="@string/instagram"
+        app:layout_constraintBottom_toTopOf="@+id/website_icon"
+        app:layout_constraintEnd_toEndOf="@+id/instagram_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/instagram_icon"
+        app:layout_constraintTop_toBottomOf="@+id/instagram_icon" />
+
+    <TextView
+        android:id="@+id/facebook_text"
+        style="@style/ContactsText"
+        android:text="@string/fecebook"
+        app:layout_constraintBottom_toTopOf="@+id/vk_icon"
+        app:layout_constraintEnd_toEndOf="@+id/facebook_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/facebook_icon"
+        app:layout_constraintTop_toBottomOf="@+id/facebook_icon" />
+
+    <ImageView
+        android:id="@+id/website_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_website_icon"
+        app:layout_constraintBottom_toTopOf="@+id/website_text"
+        app:layout_constraintEnd_toStartOf="@+id/vk_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instagram_text" />
+
+    <ImageView
+        android:id="@+id/vk_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_vk_icon"
+        app:layout_constraintBottom_toTopOf="@+id/vk_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/website_icon"
+        app:layout_constraintTop_toBottomOf="@+id/facebook_text" />
+
+    <TextView
+        android:id="@+id/website_text"
+        android:layout_marginBottom="16dp"
+        style="@style/ContactsText"
+        android:text="@string/website"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/website_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/website_icon"
+        app:layout_constraintTop_toBottomOf="@+id/website_icon" />
+
+    <TextView
+        android:id="@+id/vk_text"
+        android:layout_marginBottom="16dp"
+        style="@style/ContactsText"
+        android:text="@string/vk"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/vk_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/vk_icon"
+        app:layout_constraintTop_toBottomOf="@+id/vk_icon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

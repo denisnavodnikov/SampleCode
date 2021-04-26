@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Филиппины</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="start_hello_text_view">Куда хотите отправиться?</string>
+    <string name="island">Остров</string>
+    <string name="city">Город</string>
+    <string name="body">Body Body Body Body Body Body Body Body</string>
+    <string name="test_text">Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body </string>
+    <string name="excursions">Экскурсии</string>
+    <string name="contacts_text">Хорошо там, где мы есть!</string>
+    <string name="address">Адрес</string>
+    <string name="mail_text">Почта</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="telegram">Telegram</string>
+    <string name="instagram">Instagram</string>
+    <string name="fecebook">Fecebook</string>
+    <string name="website">Наш сайт</string>
+    <string name="vk">Вконтакте</string>
+    <string name="description">Описание</string>
+    <string name="add_to_cart">Добавить в корзину</string>
+    <string name="change_date">Выберите дату</string>
+    <string name="children_till_6">Дети до 6 лет</string>
+    <string name="adults">Взрослые</string>
+    <string name="date">Дата</string>
+    <string name="price">Стоимость</string>
+    <string name="where_will_you_stay">Где планируете остановиться?</string>
+    <string name="hotel_category">Выберите категорию отеля?</string>
+    <string name="error_date">Выберите дату</string>
+    <string name="wishes">Ваши пожелания</string>
+    <string name="transfer_from">Откуда выезжаете?</string>
+    <string name="to_transfer">Куда планируете ехать?</string>
+    <string name="check_out">Выезд</string>
+    <string name="check_in">Заезд</string>
+    <string name="children">Дети</string>
+    <string name="empty_cart">Здесь пока ничего нет</string>
+    <string name="error_price_less">С ребенком должен быть взрослый</string>
+    <string name="price_result">%1$d $</string>
+    <string name="error_adults">Укажите колличество участников</string>
+    <string name="error_city_from">Выберите пункт отправления</string>
+    <string name="error_city_to">Выберите пункт прибытия</string>
+    <string name="error_city_hotel">Выберите расположение отеля</string>
+    <string name="error_rating">Выберите категорию отеля</string>
+    <string name="error_date_since">Выберите дату заезда</string>
+    <string name="error_date_before">Виберите дату выезда</string>
+    <string name="excursion_add_to_cart">Экскурсия добавлена в корзину</string>
+    <string name="transfer_add_to_cart">Трансфер добавлен в корзину</string>
+    <string name="hotel_add_to_cart">Отель добавлен в корзину</string>
+    <string name="send_order">Отправить заказ</string>
+    <string name="order_is_sended">Заказ отправлен, в билжайшее время с вами свяжуться</string>
+    <string name="submit_your_phone">Ваш номер телефона</string>
+    <string name="submit_your_email">Ваш e-mail</string>
+    <string name="your_type_of_contact">Удобный способ связи</string>
+    <string name="prepare_order">Оформить заказ</string>
+    <string name="submit_your_contacts">Оставьте контактные данные</string>
+    <string name="your_name">Ваше имя</string>
+
+    <string name="url_geo">geo: 10.321149085759378, 123.96672729226202</string>
+    <string name="url_mail">geo: 10.321041, 123.966632</string>
+    <string name="url_whatsapp">https://wa.me/79298270471</string>
+    <string name="url_telegram">https://t.me/dabzzzz</string>
+    <string name="url_instagram">https://www.instagram.com/philippines.ru</string>
+    <string name="url_facebook">https://www.facebook.com/philippines.rus</string>
+    <string name="url_website">https://ph-tour.ru</string>
+    <string name="url_vk">https://vk.com/allphilippines</string>
+    <string name="mailto">mailto:mail@ph-tour.ru</string>
+    <string name="error_name">Введите ваше имя</string>
+    <string name="error_phone">Введите Ваш телефон</string>
+    <string name="error_email">Введите Ваш e-mail</string>
+    <string name="error_type">Выберите удобный способ для связи</string>
+    <string name="oder_is_sended">Заказ отправлен, в ближайшее время мы с Вами свяжемся</string>
+    <string name="error_send_order">Отсутствует подключение к интернету, повторите позже</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+
+
+</resources>

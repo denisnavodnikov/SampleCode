@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.excursions.ExcursionsFragment">
+
+    <TextView
+        android:id="@+id/Where_are_you_text_view"
+        android:text="@string/Where_are_you"
+        android:layout_margin="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/ExcursionsText" />
+
+    <TextView
+        android:id="@+id/going_text_view"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/going"
+        style="@style/ExcursionsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Where_are_you_text_view" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/excursions_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:paddingStart="48dp"
+        android:paddingEnd="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/going_text_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

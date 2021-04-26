@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cites_luzon">
+        <item>Манила</item>
+        <item>Кесон-Сити</item>
+        <item>Калоокан</item>
+        <item>Макати</item>
+        <item>Багио</item>
+        <item>Пасиг</item>
+        <item>Тагиг</item>
+        <item>Валенсуэла</item>
+    </string-array>
+
+    <string-array name="cites_cebu">
+        <item>Себу</item>
+        <item>Мактан</item>
+        <item>Ослоб</item>
+        <item>Моалбоал</item>
+        <item>Бантаян</item>
+        <item>Камотес</item>
+        <item>Малапаскуа</item>
+    </string-array>
+
+    <string-array name="cites_boracay">
+        <item>Станция 1</item>
+        <item>Станция 2</item>
+        <item>Станция 3</item>
+        <item>Пука Бич</item>
+        <item>Илиг Бич</item>
+        <item>Булабог Бич</item>
+        <item>Пунта Бунга Бич</item>
+    </string-array>
+
+    <string-array name="cites_bohol">
+        <item>Панглао</item>
+        <item>Такбиларан</item>
+        <item>Лоай</item>
+    </string-array>
+
+    <string-array name="cites_palavan">
+        <item>Пуэрто-Принцесса</item>
+        <item>Эль-Нидо</item>
+        <item>Порт Бартон</item>
+        <item>Корон</item>
+    </string-array>
+
+    <string-array name="cites_negros">
+        <item>Думагете</item>
+        <item>Замбоангита</item>
+        <item>Баис</item>
+        <item>Баколод</item>
+    </string-array>
+
+    <string-array name="types_of_contacts">
+        <item>WhatsApp</item>
+        <item>Телефон</item>
+        <item>E-mail</item>
+        <item>Telegram</item>
+        <item>Viber</item>
+    </string-array>
+
+</resources>
