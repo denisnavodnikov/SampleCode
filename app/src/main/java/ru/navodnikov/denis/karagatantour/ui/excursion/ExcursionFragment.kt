@@ -10,9 +10,10 @@ import androidx.navigation.fragment.navArgs
 import com.squareup.picasso.Picasso
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
-import ru.navodnikov.denis.domain.entity.Excursion
+import ru.navodnikov.denis.domain.entity.ExcursionDomain
 import ru.navodnikov.denis.karagatantour.R
 import ru.navodnikov.denis.karagatantour.databinding.FragmentExcursionBinding
+import ru.navodnikov.denis.karagatantour.entity.Excursion
 import ru.navodnikov.denis.karagatantour.ui.base.BaseFragment
 import java.io.File
 import java.util.*
@@ -27,7 +28,7 @@ class ExcursionFragment : BaseFragment<FragmentExcursionBinding>(),
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        currentExcursion = args.currentExcursion
+        currentExcursion = args.excursion
     }
 
     override fun onResume() {

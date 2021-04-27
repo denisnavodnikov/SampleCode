@@ -1,6 +1,6 @@
 package ru.navodnikov.denis.data.entity
 
-import ru.navodnikov.denis.domain.entity.Excursion
+import ru.navodnikov.denis.domain.entity.ExcursionDomain
 import ru.navodnikov.denis.domain.entity.Island
 import ru.navodnikov.denis.domain.entity.Order
 
@@ -13,11 +13,11 @@ fun IslandData.mapToDomain(): Island {
     )
 }
 
-fun ExcursionData.mapToDomain(): Excursion {
-    return Excursion(
+fun ExcursionData.mapToDomain(): ExcursionDomain {
+    return ExcursionDomain(
         title = title,
         body = body,
-        imageUri = imageUrl,
+        imageUri = imageUri,
         priceAdult = priceAdult,
         priceChild = priceChild
     )

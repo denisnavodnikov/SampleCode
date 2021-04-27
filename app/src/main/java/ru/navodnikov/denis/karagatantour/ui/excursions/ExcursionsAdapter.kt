@@ -7,8 +7,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.flaviofaria.kenburnsview.KenBurnsView
 import com.squareup.picasso.Picasso
-import ru.navodnikov.denis.domain.entity.Excursion
+import ru.navodnikov.denis.domain.entity.ExcursionDomain
 import ru.navodnikov.denis.karagatantour.R
+import ru.navodnikov.denis.karagatantour.entity.Excursion
 import java.io.File
 
 class ExcursionsAdapter(

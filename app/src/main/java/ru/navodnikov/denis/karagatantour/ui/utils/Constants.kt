@@ -10,7 +10,7 @@ class Constants{
         const val ZERO = 0
         const val SIZE_BUTTON = 20
 
-        const val BASE_URL: String = "https://api.telegram.org/"
+        const val BASE_URL: String = ""
     }
 }
 

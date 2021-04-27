@@ -112,8 +112,8 @@
         android:label="fragment_excursion"
         tools:layout="@layout/fragment_excursion" >
         <argument
-            android:name="currentExcursion"
-            app:argType="ru.navodnikov.denis.domain.entity.Excursion" />
+            android:name="excursion"
+            app:argType="ru.navodnikov.denis.karagatantour.entity.Excursion" />
     </fragment>
     <fragment
         android:id="@+id/orderFragment"

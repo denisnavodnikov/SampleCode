@@ -2,13 +2,15 @@ package ru.navodnikov.denis.karagatantour.ui.excursions
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ru.navodnikov.denis.domain.entity.Excursion
+import ru.navodnikov.denis.domain.entity.ExcursionDomain
 import ru.navodnikov.denis.domain.entity.IslandEnum
+import ru.navodnikov.denis.domain.entity.mapToDomain
 import ru.navodnikov.denis.domain.usecases.GetListOfExcursionsUseCase
+import ru.navodnikov.denis.karagatantour.entity.Excursion
 
 class ExcursionsViewModel(private val getListOfExcursionsUseCase: GetListOfExcursionsUseCase, private val island: IslandEnum) : ViewModel(), ExcursionsContract.ViewModel {
 
-    private val excursionsLiveData = MutableLiveData(getListOfExcursionsUseCase.execute(island))
+    private val excursionsLiveData = MutableLiveData(getListOfExcursionsUseCase.execute(island).map { it.mapToDomain() })
     private val changeExcursionLiveData  = MutableLiveData<ExcursionsViewModelState>()
 
     override fun getExcursionsLiveData()= excursionsLiveData

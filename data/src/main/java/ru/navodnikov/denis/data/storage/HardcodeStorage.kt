@@ -112,7 +112,7 @@ class HardcodeStorage : Storage {
             listOfExcursions.add(
                 ExcursionData(
                     title = listOfTitles[index],
-                    imageUrl = listOfUrlsCebu[index],
+                    imageUri = listOfUrlsCebu[index],
                     body = listOfBodies[index],
                     priceAdult = listOfPriceAdultCebu[index],
                     priceChild = listOfPriceChildCebu[index]
@@ -160,7 +160,7 @@ class HardcodeStorage : Storage {
             listOfExcursions.add(
                 ExcursionData(
                     title = listOfTitles[index],
-                    imageUrl = listOfUrlsLuzon[index],
+                    imageUri = listOfUrlsLuzon[index],
                     body = listOfBodies[index],
                     priceAdult = listOfPriceAdultLuzon[index],
                     priceChild =listOfPriceChildLuzon[index]
@@ -203,7 +203,7 @@ class HardcodeStorage : Storage {
             listOfExcursions.add(
                 ExcursionData(
                     title = listOfTitles[index],
-                    imageUrl = listOfUrlsPalavan[index],
+                    imageUri = listOfUrlsPalavan[index],
                     body = listOfBodies[index],
                     priceAdult = listOfPriceAdultPalavan[index],
                     priceChild = listOfPriceChildPalavan[index]
@@ -242,7 +242,7 @@ class HardcodeStorage : Storage {
             listOfExcursions.add(
                 ExcursionData(
                     title = listOfTitles[index],
-                    imageUrl = listOfUrlsBoracay[index],
+                    imageUri = listOfUrlsBoracay[index],
                     body = listOfBodies[index],
                     priceAdult = listOfPriceAdultBoracay[index],
                     priceChild = listOfPriceChildBoracay[index]
@@ -285,7 +285,7 @@ class HardcodeStorage : Storage {
             listOfExcursions.add(
                 ExcursionData(
                     title = listOfTitles[index],
-                    imageUrl = listOfUrlsBohol[index],
+                    imageUri = listOfUrlsBohol[index],
                     body = listOfBodies[index],
                     priceAdult = listOfPriceAdultBohol[index],
                     priceChild = listOfPriceChildBohol[index]
@@ -332,7 +332,7 @@ class HardcodeStorage : Storage {
             listOfExcursions.add(
                 ExcursionData(
                     title = listOfTitles[index],
-                    imageUrl = listOfUrlsNegros[index],
+                    imageUri = listOfUrlsNegros[index],
                     body = listOfBodies[index],
                     priceAdult = listOfPriceAdultNegros[index],
                     priceChild = listOfPriceChildNegros[index]

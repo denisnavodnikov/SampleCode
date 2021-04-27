@@ -1,7 +1,8 @@
 package ru.navodnikov.denis.karagatantour.ui.excursion
 
 import androidx.lifecycle.LiveData
-import ru.navodnikov.denis.domain.entity.Excursion
+import ru.navodnikov.denis.domain.entity.ExcursionDomain
+import ru.navodnikov.denis.karagatantour.entity.Excursion
 import ru.navodnikov.denis.karagatantour.ui.base.FragmentContract
 
 class ExcursionContract {

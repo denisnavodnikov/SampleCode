@@ -9,7 +9,7 @@ import ru.navodnikov.denis.data.db.dao.ToursDAO
 import ru.navodnikov.denis.data.entity.*
 import ru.navodnikov.denis.data.networking.TelegramApiService
 import ru.navodnikov.denis.data.storage.Storage
-import ru.navodnikov.denis.domain.entity.Excursion
+import ru.navodnikov.denis.domain.entity.ExcursionDomain
 import ru.navodnikov.denis.domain.entity.Order
 import ru.navodnikov.denis.domain.repositories.OrderRepository
 
@@ -20,7 +20,7 @@ class OrderRepositoryImpl(
     private val telegramApiService: TelegramApiService
 ) : OrderRepository {
     override suspend fun orderExcursion(
-        excursion: Excursion,
+        excursionDomain: ExcursionDomain,
         numberAdults: Int,
         numberChildren: Int,
         date: String,
@@ -29,8 +29,8 @@ class OrderRepositoryImpl(
         storageDB.insert(
             OrderData(
                 typeOfOrder = context.getText(R.string.excursion).toString(),
-                title = context.resources.getString(excursion.title),
-                imageUri = excursion.imageUri,
+                title = context.resources.getString(excursionDomain.title),
+                imageUri = excursionDomain.imageUri,
                 numberOfAdult = context.getString(R.string.adults_number, numberAdults),
                 numberOfChildren = when (numberChildren) {
                     ZERO -> EMPTY_TEXT

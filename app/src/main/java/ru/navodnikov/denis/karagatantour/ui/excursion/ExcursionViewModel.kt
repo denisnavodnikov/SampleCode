@@ -7,9 +7,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import ru.navodnikov.denis.data.entity.EMPTY_TEXT
-import ru.navodnikov.denis.domain.entity.Excursion
+import ru.navodnikov.denis.domain.entity.ExcursionDomain
+import ru.navodnikov.denis.domain.entity.mapToDomain
 import ru.navodnikov.denis.domain.usecases.OrderExcursionUseCase
 import ru.navodnikov.denis.karagatantour.R
+import ru.navodnikov.denis.karagatantour.entity.Excursion
 import ru.navodnikov.denis.karagatantour.ui.utils.countPrice
 
 class ExcursionViewModel(
@@ -31,7 +33,7 @@ class ExcursionViewModel(
         if (adults == 0 && children > 0) {
             massageLiveData.value = R.string.error_price_less
         } else {
-            priceLiveData.value = countPrice(adults, children, excursion)
+            priceLiveData.value = countPrice(adults, children, excursion.mapToDomain())
         }
     }
 
@@ -53,7 +55,7 @@ class ExcursionViewModel(
             else -> {
                 viewModelScope.launch {
                     orderExcursionUseCase.execute(
-                        excursion,
+                        excursion.mapToDomain(),
                         numberAdults,
                         numberChildren,
                         date,

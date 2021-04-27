@@ -1,12 +1,12 @@
 package ru.navodnikov.denis.domain.repositories
 
 import kotlinx.coroutines.flow.Flow
-import ru.navodnikov.denis.domain.entity.Excursion
+import ru.navodnikov.denis.domain.entity.ExcursionDomain
 import ru.navodnikov.denis.domain.entity.Order
 
 interface OrderRepository {
     suspend fun orderExcursion(
-        excursion: Excursion,
+        excursionDomain: ExcursionDomain,
         numberAdults: Int,
         numberChildren: Int,
         date: String,
