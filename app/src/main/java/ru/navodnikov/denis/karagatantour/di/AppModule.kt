@@ -2,7 +2,6 @@ package ru.navodnikov.denis.karagatantour.di
 
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
-import ru.navodnikov.denis.domain.entity.ExcursionDomain
 import ru.navodnikov.denis.domain.entity.IslandEnum
 import ru.navodnikov.denis.karagatantour.entity.Excursion
 import ru.navodnikov.denis.karagatantour.ui.basket.BasketViewModel

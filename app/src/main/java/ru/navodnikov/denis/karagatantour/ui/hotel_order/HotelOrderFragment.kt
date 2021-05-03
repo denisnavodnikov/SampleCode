@@ -84,12 +84,12 @@ class HotelOrderFragment : BaseFragment<FragmentHotelOrderBinding>(),
                 fragmentBinding?.hotelCitesAutoComplete?.setAdapter(arrayAdapter)
             }
         })
-        hotelOrderViewModel.getdateSinceLiveData().observe(this, { date ->
+        hotelOrderViewModel.getDateSinceLiveData().observe(this, { date ->
             date?.let {
                 fragmentBinding?.dateSinceBookEditText?.setText(date)
             }
         })
-        hotelOrderViewModel.getdateBeforeLiveData().observe(this, { date ->
+        hotelOrderViewModel.getDateBeforeLiveData().observe(this, { date ->
             date?.let {
                 fragmentBinding?.dateBeforeBookEditText?.setText(date)
             }

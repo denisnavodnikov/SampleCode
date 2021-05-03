@@ -63,7 +63,7 @@ class IslandFragment : BaseFragment<FragmentIslandBinding>(),
                 Picasso.get().load(File(islandScreen.imageHotel)).into(fragmentBinding?.islandHotelsKbv)
             }
         })
-        islandViewModel.getselectedTransfersLiveData().observe(this, { state ->
+        islandViewModel.getSelectedTransfersLiveData().observe(this, { state ->
             state?.let {
                 if (state is IslandViewModelState.NavigateToTransfers) {
                     islandViewModel.clearNavigation()
@@ -71,7 +71,7 @@ class IslandFragment : BaseFragment<FragmentIslandBinding>(),
                 }
             }
         })
-        islandViewModel.getselectedExcursionsLiveData().observe(this, { state ->
+        islandViewModel.getSelectedExcursionsLiveData().observe(this, { state ->
             state?.let {
                 if (state is IslandViewModelState.NavigateToExcursions) {
                     islandViewModel.clearNavigation()
@@ -81,7 +81,7 @@ class IslandFragment : BaseFragment<FragmentIslandBinding>(),
                 }
             }
         })
-        islandViewModel.getselectedHotelsLiveData().observe(this, { state ->
+        islandViewModel.getSelectedHotelsLiveData().observe(this, { state ->
             state?.let {
                 if (state is IslandViewModelState.NavigateToHotels) {
                     islandViewModel.clearNavigation()

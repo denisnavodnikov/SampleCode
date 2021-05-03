@@ -9,11 +9,11 @@ class IslandContract {
     interface ViewModel : FragmentContract.ViewModel {
         fun getIslandScreenLiveData(): LiveData<IslandScreen>
         fun selectedExcursions(island: IslandEnum)
-        fun getselectedExcursionsLiveData(): LiveData<IslandViewModelState>
+        fun getSelectedExcursionsLiveData(): LiveData<IslandViewModelState>
         fun selectedTransfers()
         fun selectedHotels(island: IslandEnum)
-        fun getselectedTransfersLiveData(): LiveData<IslandViewModelState>
-        fun getselectedHotelsLiveData(): LiveData<IslandViewModelState>
+        fun getSelectedTransfersLiveData(): LiveData<IslandViewModelState>
+        fun getSelectedHotelsLiveData(): LiveData<IslandViewModelState>
         fun clearNavigation()
     }
 

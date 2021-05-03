@@ -22,9 +22,9 @@ class IslandViewModel(private val getIslandScreenUseCase: GetIslandScreenUseCase
     private val selectedHotelsLiveData = MutableLiveData<IslandViewModelState>()
 
     override fun getIslandScreenLiveData(): LiveData<IslandScreen> = islandScreenLiveData
-    override fun getselectedTransfersLiveData(): LiveData<IslandViewModelState> = selectedTransfersLiveData
-    override fun getselectedExcursionsLiveData(): LiveData<IslandViewModelState> = selectedExcursionsLiveData
-    override fun getselectedHotelsLiveData(): LiveData<IslandViewModelState> = selectedHotelsLiveData
+    override fun getSelectedTransfersLiveData(): LiveData<IslandViewModelState> = selectedTransfersLiveData
+    override fun getSelectedExcursionsLiveData(): LiveData<IslandViewModelState> = selectedExcursionsLiveData
+    override fun getSelectedHotelsLiveData(): LiveData<IslandViewModelState> = selectedHotelsLiveData
 
     override fun selectedTransfers() {
         selectedTransfersLiveData.value = IslandViewModelState.NavigateToTransfers(TRANSFERS)

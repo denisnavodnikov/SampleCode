@@ -26,8 +26,8 @@ class HotelOrderViewModel(
     private val dateBeforeLiveData: LiveData<String> = dateBeforeMutableLiveData
 
     override fun getCitesLiveData() = citesLiveData
-    override fun getdateSinceLiveData() = dateSinceLiveData
-    override fun getdateBeforeLiveData() = dateBeforeLiveData
+    override fun getDateSinceLiveData() = dateSinceLiveData
+    override fun getDateBeforeLiveData() = dateBeforeLiveData
     override fun getMassageLiveData() = messageLiveData
 
     override fun setDateSince(date: String) {

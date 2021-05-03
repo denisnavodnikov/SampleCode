@@ -9,7 +9,7 @@ class OrderContract {
         fun getTypesLiveData(): LiveData<Array<String>>
         fun getMassageLiveData(): LiveData<Int>
         fun sendOrder(name: String, phone: String, email: String, typeOfContact: String)
-        fun getNavigateLiveData(): MutableLiveData<OrderViewModelState>
+        fun getNavigateLiveData(): LiveData<OrderViewModelState>
         fun clearNavigation()
     }
     interface View : FragmentContract.View {

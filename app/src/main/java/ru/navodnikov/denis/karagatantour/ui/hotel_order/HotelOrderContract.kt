@@ -7,8 +7,8 @@ import ru.navodnikov.denis.karagatantour.ui.base.FragmentContract
 class HotelOrderContract {
     interface ViewModel : FragmentContract.ViewModel {
         fun getCitesLiveData(): LiveData<Array<out String>>
-        fun getdateSinceLiveData(): LiveData<String>
-        fun getdateBeforeLiveData(): LiveData<String>
+        fun getDateSinceLiveData(): LiveData<String>
+        fun getDateBeforeLiveData(): LiveData<String>
         fun setDateSince(date: String)
         fun setDateBefore(date: String)
         fun doOrder(city: String, rating: Int, numberAdults: Int, numberChildren: Int, dateSince: String, dateBefore: String, comments: String)
