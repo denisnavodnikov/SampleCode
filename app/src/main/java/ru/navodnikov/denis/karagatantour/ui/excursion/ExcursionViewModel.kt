@@ -7,7 +7,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import ru.navodnikov.denis.data.entity.EMPTY_TEXT
-import ru.navodnikov.denis.domain.entity.ExcursionDomain
 import ru.navodnikov.denis.domain.entity.mapToDomain
 import ru.navodnikov.denis.domain.usecases.OrderExcursionUseCase
 import ru.navodnikov.denis.karagatantour.R

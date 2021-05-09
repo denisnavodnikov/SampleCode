@@ -1,9 +1,7 @@
 package ru.navodnikov.denis.karagatantour.ui.start
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ru.navodnikov.denis.domain.entity.Island
 import ru.navodnikov.denis.domain.entity.IslandEnum
 import ru.navodnikov.denis.domain.usecases.GetListOfIslandsUseCase
 

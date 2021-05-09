@@ -2,7 +2,6 @@ package ru.navodnikov.denis.karagatantour.ui.excursions
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ru.navodnikov.denis.domain.entity.ExcursionDomain
 import ru.navodnikov.denis.domain.entity.IslandEnum
 import ru.navodnikov.denis.domain.entity.mapToDomain
 import ru.navodnikov.denis.domain.usecases.GetListOfExcursionsUseCase

@@ -6,8 +6,6 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import ru.navodnikov.denis.domain.usecases.DeleteOrderUseCase
-import ru.navodnikov.denis.domain.usecases.GetListOfOrdersUseCase
 import ru.navodnikov.denis.domain.usecases.GetTypesOfContacts
 import ru.navodnikov.denis.domain.usecases.SendOrdersUseCase
 import ru.navodnikov.denis.karagatantour.R
@@ -40,20 +38,19 @@ class OrderViewModel(
             }
             else -> {
                 viewModelScope.launch {
-                    val resultIsOk = sendOrdersUseCase.execute(
-                        name = name,
-                        phone = phone,
-                        email = email,
-                        typeOfContact = typeOfContact
-                    )
-                    if (resultIsOk) {
-                        withContext(Dispatchers.Main) {
-                            messageLiveData.value = R.string.oder_is_sended
-                            navigateLiveData.value = OrderViewModelState.NavigateToBasket
-                        }
-                    }
                     try {
-
+                        val resultIsOk = sendOrdersUseCase.execute(
+                            name = name,
+                            phone = phone,
+                            email = email,
+                            typeOfContact = typeOfContact
+                        )
+                        if (resultIsOk) {
+                            withContext(Dispatchers.Main) {
+                                messageLiveData.value = R.string.oder_is_sended
+                                navigateLiveData.value = OrderViewModelState.NavigateToBasket
+                            }
+                        }
                     } catch (e: Exception) {
                         withContext(Dispatchers.Main) {
                             messageLiveData.value = R.string.error_send_order
